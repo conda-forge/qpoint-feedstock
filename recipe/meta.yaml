@@ -1,4 +1,4 @@
-{% set version = "1.13.0" %}
+{% set version = "1.14.0" %}
 
 package:
   name: qpoint
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/q/qpoint/qpoint-{{ version }}.tar.gz
-  sha256: 30e2aa0173687c438c35bd734ee8a0919667f079f61d0dbec83fce8fceaa59a8
+  sha256: 6b1714596e1982337acc1c80812b06b9467fb80e7442b6775cddee4318364e99
 
 build:
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
