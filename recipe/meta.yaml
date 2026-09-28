@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/q/qpoint/qpoint-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/q/qpoint/qpoint-{{ version }}.tar.gz
   sha256: 6b1714596e1982337acc1c80812b06b9467fb80e7442b6775cddee4318364e99
 
 build:
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
